@@ -1,0 +1,19 @@
+class MyHashSet {
+private:
+    vector<bool> vec;
+public:
+    MyHashSet() 
+        : vec(1000001, false) {}
+    
+    void add(int key) {
+        vec[key] = true;
+    }
+    
+    void remove(int key) {
+        vec[key] = false;
+    }
+
+    bool contains(int key) {
+        return vec[key];
+    }
+};
